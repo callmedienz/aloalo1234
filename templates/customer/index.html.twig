@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Cars list</h1>
+
+    <table class="table table-bordered text-center">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Birthday</th>
+                <th>Young Driver</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for customer in customers %}
+            <tr>
+                <td>{{ customer.id }}</a></td>
+                <td>{{ customer.name }}</td>
+                <td>{{ customer.birthday }}</td>
+                <td>{{ customer.isyoungdriver }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
